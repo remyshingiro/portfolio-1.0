@@ -1,24 +1,38 @@
-import { MapPin, Link as LinkIcon } from 'lucide-react';
+import { Hero } from './components/sections/Hero';
+import { Projects } from './components/sections/Projects';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
-function App() {
+export default function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
-      <div className="bg-canvas-overlay border border-border-default p-6 rounded-xl max-w-sm w-full">
-        <div className="w-24 h-24 rounded-full bg-accent mb-4 border-4 border-border-default" />
-        <h1 className="text-2xl font-bold">Remy Shingiro</h1>
-        <p className="text-fg-muted mb-4">Software Developer</p>
-        
-        <div className="space-y-2 text-sm text-fg-muted">
-          <div className="flex items-center gap-2">
-            <MapPin size={16} /> Kigali, Rwanda
-          </div>
-          <div className="flex items-center gap-2 text-accent">
-            <LinkIcon size={16} /> <span className="hover:underline">remy.space</span>
-          </div>
+    <div className="min-h-screen bg-canvas-default text-fg-default font-sans selection:bg-accent/30">
+      
+      {/* Minimalist Top Navigation */}
+      <nav className="h-16 border-b border-border-default bg-canvas-default/80 backdrop-blur-md sticky top-0 z-50 flex items-center justify-between px-6 lg:px-12">
+        <span className="font-bold text-lg tracking-tight">remy.dev</span>
+        <div className="flex items-center gap-4 text-fg-muted">
+          <a href="https://github.com/remyshingiro" target="_blank" rel="noreferrer" className="hover:text-fg-default transition-colors">
+            <Github size={20} />
+          </a>
+          <a href="#" className="hover:text-fg-default transition-colors">
+            <Linkedin size={20} />
+          </a>
+          <a href="mailto:your.email@example.com" className="hover:text-fg-default transition-colors">
+            <Mail size={20} />
+          </a>
         </div>
-      </div>
-    </div>
-  )
-}
+      </nav>
 
-export default App
+      {/* Main Content Layout */}
+      <main className="max-w-[1280px] mx-auto px-6 lg:px-12">
+        <Hero />
+        <Projects />
+        {/* We will add the Skills and GitHub Graph sections here next */}
+      </main>
+
+      {/* Simple Footer */}
+      <footer className="border-t border-border-default mt-24 py-8 text-center text-sm text-fg-muted">
+        <p>© {new Date().getFullYear()} Remy Shingiro. Built with React & Tailwind.</p>
+      </footer>
+    </div>
+  );
+}
