@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Section } from '../ui/Section';
 import { FeatureCard } from '../ui/FeatureCard';
 
@@ -32,20 +33,56 @@ const PROJECTS_DATA: Project[] = [
 ];
 
 export const Projects = () => {
+  // 1. Container variant controls the stagger effect
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // Time between each card popping up
+      },
+    },
+  };
+
+  // 2. Item variant controls the spring physics of individual cards
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 80,
+        damping: 15,
+      },
+    },
+  };
+
   return (
     <Section id="projects" title="Selected Engineering Work">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      {/* We use whileInView so the animation triggers when the user scrolls here */}
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }} // Triggers right before it enters the viewport
+      >
         {PROJECTS_DATA.map((project, index) => (
-          <FeatureCard 
-            key={index}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            liveUrl={project.liveUrl}
-            repoUrl={project.repoUrl}
-          />
+          <motion.div key={index} variants={itemVariants} className="h-full">
+            <FeatureCard 
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              liveUrl={project.liveUrl}
+              repoUrl={project.repoUrl}
+              className="h-full" // Ensures cards stretch to equal height in the grid
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
+      
     </Section>
   );
 };

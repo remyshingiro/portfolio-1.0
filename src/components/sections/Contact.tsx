@@ -26,7 +26,7 @@ export const Contact = () => {
               <div>
                 <p className="text-sm text-fg-muted font-medium mb-1">Email</p>
                 <a href="mailto:your.email@example.com" className="text-fg-default hover:text-accent transition-colors">
-                  your.email@example.com
+                  shingiroremy303@gmail.com
                 </a>
               </div>
             </div>
@@ -38,7 +38,7 @@ export const Contact = () => {
               <div>
                 <p className="text-sm text-fg-muted font-medium mb-1">Phone</p>
                 <a href="tel:+250123456789" className="text-fg-default hover:text-accent transition-colors">
-                  +250 123 456 789
+                  +250 784 154 697
                 </a>
               </div>
             </div>
@@ -74,7 +74,7 @@ export const Contact = () => {
                 id="name" 
                 required 
                 className="bg-canvas-default border border-border-default rounded-lg px-4 py-3 text-fg-default placeholder:text-border-default focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                placeholder="John Doe"
+                placeholder="Mike Cyubahiro"
               />
             </div>
 
@@ -86,7 +86,7 @@ export const Contact = () => {
                 id="email" 
                 required 
                 className="bg-canvas-default border border-border-default rounded-lg px-4 py-3 text-fg-default placeholder:text-border-default focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                placeholder="john@example.com"
+                placeholder="yourName@gmail.com"
               />
             </div>
 

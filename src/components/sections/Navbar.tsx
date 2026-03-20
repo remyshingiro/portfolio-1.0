@@ -35,7 +35,7 @@ export const Navbar = () => {
           className="font-bold text-lg tracking-tight hover:text-accent transition-colors cursor-pointer z-50" 
           onClick={() => { window.scrollTo(0, 0); closeMenu(); }}
         >
-          remy.dev
+          Remy Shingiro - Software Engineer
         </span>
         
         {/* Desktop Navigation */}
@@ -55,13 +55,15 @@ export const Navbar = () => {
           <div className="w-px h-4 bg-border-default mx-2"></div>
           
           <div className="flex items-center gap-4">
-            <a href="https://github.com/remyshingiro" target="_blank" rel="noreferrer" className="hover:text-fg-default transition-colors">
+            <a href="https://github.com/remyshingiro" target="_blank" rel="noreferrer" className="hover:text-fg-default transition-colors" aria-label="GitHub">
               <Github size={20} />
             </a>
-            <a href="#" target="_blank" rel="noreferrer" className="hover:text-fg-default transition-colors">
+            {/* CORRECTED LINKEDIN: href goes to the URL, target opens new tab */}
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer" className="hover:text-fg-default transition-colors" aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:your.email@example.com" className="hover:text-fg-default transition-colors">
+            {/* CORRECTED EMAIL: Added "mailto:" prefix */}
+            <a href="mailto:shingiroremy303@gmail.com" className="hover:text-fg-default transition-colors" aria-label="Email">
               <Mail size={20} />
             </a>
           </div>
@@ -102,10 +104,12 @@ export const Navbar = () => {
           <a href="https://github.com/remyshingiro" target="_blank" rel="noreferrer" className="hover:text-fg-default">
             <Github size={28} />
           </a>
-          <a href="#" target="_blank" rel="noreferrer" className="hover:text-fg-default">
+          {/* CORRECTED MOBILE LINKEDIN */}
+          <a href="https://www.linkedin.com/in/shingiro-rukundo-remy-8024372b5/" target="_blank" rel="noreferrer" className="hover:text-fg-default">
             <Linkedin size={28} />
           </a>
-          <a href="mailto:your.email@example.com" className="hover:text-fg-default">
+          {/* CORRECTED MOBILE EMAIL */}
+          <a href="mailto:shingiroremy303@gmail.com" className="hover:text-fg-default">
             <Mail size={28} />
           </a>
         </div>
