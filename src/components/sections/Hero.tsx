@@ -1,22 +1,23 @@
 import { ArrowRight, FileText, MapPin } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion'; // <-- EXPLICIT TYPE IMPORT
 
 export const Hero = () => {
-  // 1. Container variant to stagger the children rendering
-  const containerVariants = {
+  // <-- APPLIED VARIANTS TYPE HERE
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // Delay between each element appearing
+        staggerChildren: 0.15,
         delayChildren: 0.1,
       },
     },
   };
 
-  // 2. Item variant for the smooth spring physics slide-up
-  const itemVariants = {
+  // <-- APPLIED VARIANTS TYPE HERE
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -71,7 +72,7 @@ export const Hero = () => {
 
       {/* Right Column: The Avatar */}
       <motion.div 
-        className="relative group flex-shrink-0"
+        className="relative group shrink-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

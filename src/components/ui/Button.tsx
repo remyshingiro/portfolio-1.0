@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
-import { LucideIcon, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react'; // <-- EXPLICIT TYPE IMPORT
 import { cn } from '../../lib/utils';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

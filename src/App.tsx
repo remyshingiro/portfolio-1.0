@@ -18,7 +18,7 @@ export default function App() {
       <Navbar />
 
       {/* Main Content Layout */}
-      <main className="max-w-[1000px] mx-auto px-6 lg:px-12">
+      <main className="max-w-250 mx-auto px-6 lg:px-12">
         <Hero />
         <Skills />
         <Projects />
