@@ -26,9 +26,11 @@ const PROJECTS_DATA: Project[] = [
     repoUrl: "https://github.com/remyshingiro"
   },
   {
-    title: "SwimShop E-commerce",
+    title: "KigaliSwimShop E-commerce",
     description: "A modern e-commerce storefront for swimming equipment. Built with a focus on responsive layout, fast load times, and a clean user interface.",
     tags: ["E-commerce", "React", "Tailwind CSS", "UI/UX"],
+    liveUrl: "https://www.kigaliswimshop.online/"
+    
   }
 ];
 
