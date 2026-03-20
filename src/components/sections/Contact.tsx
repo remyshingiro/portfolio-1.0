@@ -57,11 +57,14 @@ export const Contact = () => {
 
         {/* Right Column: The Working Form */}
         <div className="bg-canvas-overlay/30 border border-border-default rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-          {/* Action points to Web3Forms free API */}
           <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-5">
             
-            {/* REQUIRED: You must replace this value with your own free access key */}
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+            {/* INJECTING THE ENV VARIABLE HERE */}
+            <input 
+              type="hidden" 
+              name="access_key" 
+              value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} 
+            />
             
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm font-medium text-fg-default">Full Name</label>
@@ -99,7 +102,6 @@ export const Contact = () => {
               ></textarea>
             </div>
 
-            {/* Spam protection checkbox (hidden by default to users) */}
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
             <Button type="submit" icon={Send} className="w-full py-3 mt-2">
