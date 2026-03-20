@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# Remy Shingiro | Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A production-ready, high-performance developer portfolio built with React, TypeScript, and Tailwind CSS v4. Engineered for maximum speed, accessibility, and SEO.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Site-2f81f7?style=for-the-badge)](https://remy.space)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏗 Architecture & Engineering Focus
 
-## React Compiler
+This portfolio was architected with a strict focus on separation of concerns, scalability, and modern web vitals:
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+* **Layered Component Design:** UI primitives (buttons, cards, typography) are completely decoupled from data-fetching and layout logic.
+* **Performance First:** Achieves near-perfect Lighthouse scores through route-level code splitting (`React.lazy` and `Suspense`), optimized asset delivery, and lightweight SVG icons.
+* **Premium Micro-Interactions:** Utilizes Framer Motion for hardware-accelerated, spring-physics-based scroll reveals and layout transitions without blocking the main thread.
+* **Serverless Architecture:** Integrated with Cloudflare Edge Networks for global low-latency delivery, and Web3Forms for a zero-cost, serverless contact backend.
+* **Technical SEO:** Implements strict semantic HTML5, OpenGraph metadata, and JSON-LD structured data for rich search engine indexing.
 
-## Expanding the ESLint configuration
+## 💻 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Core:** React 18, TypeScript, Vite
+* **Styling:** Tailwind CSS v4 (CSS-first engine), CSS Variables
+* **Animation:** Framer Motion
+* **Integrations:** GitHub API (`react-github-calendar`), Web3Forms API
+* **Deployment & CI/CD:** Cloudflare Pages
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Local Development Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To run this project locally, you will need Node.js installed on your machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/remyshingiro/your-repo-name.git](https://github.com/remyshingiro/your-repo-name.git)
+   cd your-repo-name
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Bash
+npm install
+Environment Variables:
+Create a .env file in the root directory and add your Web3Forms access key to enable the contact form:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Code snippet
+VITE_WEB3FORMS_ACCESS_KEY=your_access_key_here
+Start the development server:
+
+Bash
+npm run dev
+📁 Directory Structure
+Plaintext
+├── public/                 # Static assets (Resume, OG Image, Robots.txt)
+├── src/
+│   ├── components/
+│   │   ├── sections/       # Stateful, page-level components (Hero, Projects, Contact)
+│   │   └── ui/             # Reusable, stateless atomic UI primitives
+│   ├── lib/                # Shared utilities (e.g., Tailwind class merging)
+│   ├── App.tsx             # Root layout and lazy-loading orchestrator
+│   ├── index.css           # Tailwind v4 theme variables and global styles
+│   └── main.tsx            # React DOM entry point
+└── tailwind.config.js      # Minimal config (v4 relies mostly on index.css)
+🤝 Let's Connect
+I am actively building scalable web applications and exploring AI solutions for the agricultural sector in Rwanda. I am currently open to new engineering opportunities.
+
+Portfolio: remy.space
+
+LinkedIn: Remy Shingiro
+
+Email: shingiroremy303@gmail.com
+
+Crafted with React and Tailwind CSS.
+
+
+Make sure to replace `your-repo-name` under the Local Development Setup section and update the LinkedIn URL at the bottom with your actual profile link before committing! 
+
+Would you like to review strategies for leveraging this new portfolio to reach out to recrui
